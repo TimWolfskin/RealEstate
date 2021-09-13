@@ -1,0 +1,17 @@
+<svg id="Группа_1" data-name="Группа 1" xmlns="http://www.w3.org/2000/svg" width="118.22" height="118.157" viewBox="0 0 118.22 118.157">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <ellipse class="cls-1" cx="59.11" cy="59.079" rx="56.61" ry="56.579"/>
+  <path class="cls-2" d="M1127.79,469.026l-34.48-19.454V488.48l34.48-19.454" transform="translate(-1047.47 -409.062)"/>
+</svg>

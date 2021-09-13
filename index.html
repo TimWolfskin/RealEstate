@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <a class="header__top-logo" href="#">
+          buildy
+        </a>
+        <nav class="menu">
+          <button class="menu__btn">
+            <img src="images/button.svg" alt="">
+          </button>
+          <ul class="menu__list">
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Home</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Blog</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Client</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Service</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">About us</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__content">
+        <div class="header__content-items">
+          <div class="header__content-item">
+            <h2 class="header__title">
+              Your Dream is here
+              <span>We Make Buildings</span>
+              <p class="header__subtitle">
+                Lorum Ipsum site dolor, it coz happen anything lorum ipsum
+                is a bigii challange there is.
+              </p>
+              <a class="header__content-btn" href="#">
+                read more
+              </a>
+            </h2>
+          </div>
+          <div class="header__content-item">
+            <div class="header__video">
+              <a data-fancybox class="header__video-icon" href="https://www.youtube.com/watch?v=d1rOMZN2oTw">
+                <img src="images/header-video-icon.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="search">
+          <div class="search__item">
+            <select class="search__select">
+              <option value="1">Property Type</option>
+              <option value="2">Residential Real Estate</option>
+              <option value="3">Commercial Real Estate</option>
+              <option value="4">Raw Land & New Construction</option>
+              <option value="5">Real Estate Investment Trusts (REITs)</option>
+            </select>
+          </div>
+
+          <div class="search__item">
+            <select class="search__select">
+              <option value="1">Select City</option>
+              <option value="2">Los Angeles</option>
+              <option value="3">New York</option>
+              <option value="4">Dallas</option>
+              <option value="5">Sacramento</option>
+            </select>
+          </div>
+          <button class="search__btn">
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="services">
+    <div class="container">
+      <div class="services__items">
+        <div class="services__item">
+          <div class="services__item-image">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="79" height="79"
+              viewBox="0 0 79 79">
+              <image id="Modern" width="79" height="79"
+                xlink:href="data:img/png;base64,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" />
+            </svg>
+          </div>
+          <h4 class="services__item-title">
+            Modern Recident
+          </h4>
+          <p class="services__item-text">
+            Lorem ipsum dolor sit amet,sed do a consectetur adipiscing elit, sed do o eiusmod tempor.
+          </p>
+          <a class="services__item-link" href="#">
+            Read more
+          </a>
+        </div>
+        <div class="services__item">
+          <div class="services__item-image">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85" height="77"
+              viewBox="0 0 85 77">
+              <image id="Development" width="85" height="77"
+                xlink:href="data:img/png;base64,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" />
+            </svg>
+          </div>
+          <h4 class="services__item-title">
+            Development services
+          </h4>
+          <p class="services__item-text">
+            Lorem ipsum dolor sit amet,sed do a consectetur adipiscing elit, sed do o eiusmod tempor.
+          </p>
+          <a class="services__item-link" href="#">
+            Read more
+          </a>
+        </div>
+        <div class="services__item">
+          <div class="services__item-image">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71" height="79"
+              viewBox="0 0 71 79">
+              <image id="market_analysis" data-name="market analysis" width="71" height="79"
+                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABPCAYAAAC549hyAAAHU0lEQVR4nO2cWYwUVRSG/zMiCiKLCrIpsijBQDQaESVG4MGoICovKA9GEyRqIGKIu8QFI/JGQBNcIhoTgxiBYRHcQAUFNCKLIMuEXRYBZR2RAX5zmFszl5rq7lvdt3q6e/iTTldX3fWrW3c591QLEhTJlgD6ALgewA0AOgNoD6ANgNYicpBkPwBfAfgbwFYAFQBWAfgFwDIROZ5kGfMqkh1JjiG5iGQVU0vBafh+acIcItmj2IEIybtIziJ5Mk1lbWWCc4LkYCuPbiSnkLy2XisbRyTvILncEYgrnCgwO63r5SSvK2QonUl+mQWUTHAygQmkLXQSyRb1CsKWeYRGkzyWA5hUcFzB2Hq2ELhoYVuYJu1DYTjZgHnTCt+Y5Pn1BUYLu9ETGIbg+AAzm+TCIN18gulFcp9HMDacWz2BCbSGZLt8gbmR5D+ewTDqDnsAE2gtydZJg9ERaW8CYOrA8Qgm0AqSzZMCcwnJ9f6Z1KillZdvMDT9T9Ok4HzuGUZYQZ/TvtjAjEiGx1lyWVsxVzA6DyJ5sy8wnUhWJgAjLBc4uYJ5zpxf42UORPKzZFjUUSY4vsAEejFXMP2T4RCpdHB8g1EdJXlZLnC+SwhElFLBSQJMnbTjgunjv/5pFQUnSTCq9dnC+TRGxeZp5cznkyzAMAJO0mB0utAtGzC62v4vRsVmWXE/jBHPlg2nMMGYxIfHrJhPOHYlEwdDcgDJnnHgzHes0HGSY0m2seK2NAb1I45pBAqvrfIFRudwL7uCaWSGuUzSyt+SJp2eMc0a9toqn2BUS13huI5Sj1lxriD5jE6sSHa1zt/rmBatxyrfYGiMaxe6wBnlUJH9wfSbZPeQfUczvQm19uUNDukxxtrKN5hAKZ+CQGUArnFoYD+JSJU5HgPA7i+aAHhBD0SEABY7pOeqRQAGiUhlAAbA+DRx/wTQT0QqTPgBAOaaMoaVcbOwEYDuDgWttI4vjbh+J8mV5rhDvPqnVJJgVFdnLAHJPxwegZVW+Icdwrso3WOV1KNk6yMXONsdK9MTtf3KSyR35YQmNZwoe0w6hcH0dzS5zHOBc9CxMot1ZAnFvUA7Y5LvkTwVj02et1CyUUzD1gKSl0dlYxwJ4ixBigLO/ph3XCeMU0k+QfIeks2stEaWGpytMeGEtY3kVaidbbv2RQUPR+c5+3NM40oA41A9zzlphuCSkMLZ4lCR3wA8ZT6/R1y3zQH7SgWOTgI3OISrFJGJMGshABNC13+0jjv5LWI9iuQwh/5Bffs6BHBITrOu6Qh2sbnW3PjxlUSfoxO6jgB2OISdLiJDgx9mo75MRPZa5yYBGOWYdyv1Jk11UedVAHo5puVTvUVko12QCse7PTlqc4xkGcnXHNNwajm6ZImZni/VeGeUme9vHMmPBKBrsQetSgw2fsNj83l7E9Ipe/QO4EyLkZcat4Zav4cAcLfJFrYqjNnlLDg/ANhZIhXMRevsuGfgiMhpAB/ESLSr8SgdDaB4nKYza4UdoubdB7OPvA1AMn4tdZVptFIbUr4dsW8TkSXBj+Cx0tajHdH7eS5MIekYgJ/t8pSFCvcGgMMNEg0wV0ROoLrVnpnwngXHTOheqa/S1bOmW9m/jYiWo5oMYHVDoGHpL2OMh9lm0v23TnXgGLPDAwD+rcfC5ltTgkcKwKPmu2+jqEKIiM6CnwTwbpFW9ggAdXZYa56O3gAGAojyC9SO+C1Ut5pWAIaZ8+mdLM0rO0kpqbXVjCj3NpJdSC6LCD/eCjPWOp9+d4LkeSRnFhEc3XOP6keDNC8iucoKv9faIlJvkQPWtXWp0rETbEpyjgcYYfmGo+4x7a2b+irJLWbTcoSVbl8rzjDr/IRQei5mnBoD13S/bLzDmWfFjdohHWJd36Q33PrdI2Jb6WDKJmjL9ORqpsjOGzM/sm3bQyJytM99C+ARA0YZvAOgcSh8lRMcVAM6JSLPm0wKcRZtTz3CFVU1s46fNsulM8e6pooIf9gZTiARmWnsN5n3mgtUIqJDPYyPzrgUpdwTGw6qE98hIoPMo7a5GAGZ9dOMFHMf1eas4AQSkWnGCehxRyN9Qci8bj0fQNs05VmdExyYzlpEpgDoAuB+k+npAucz0WFnY2nOcALpmkxEZonI3QDUE+Mhs9Ld7SsPj2qVIamjAJZHrq1ylRkJPjYfbcZtzT+haOtqZ+CdSCJvT/pafSATgROWiOwBsCDPFcxF5Uhhz2noOh3YdvLSchLWJmO5m+opmyUicgBFDEf32GabecpCeyMujdqRvM9cTvePBeXBQaHDqTL+PtvNlvOvOooAWOMIxJYavGY6hJsdHBQynNtF5FCWcU9mGW9d4OSNQu6QcwADR2+1KJXb50p1tPoiy3jlDmGKWySbGC/XONodNrGWZMsREbXtDFdOMaLNMQ4VDUMkX4/RcgY2GDCoNbR/7wDmqNObe6Um8xc0mV5hmBFV7ZJfW4nIrhSO5ba2R508t/CsVuSc6hycatUd1QD8D7ks9cPtMfSzAAAAAElFTkSuQmCC" />
+            </svg>
+          </div>
+          <h4 class="services__item-title">
+            Market analysis
+          </h4>
+          <p class="services__item-text">
+            Lorem ipsum dolor sit amet,sed do a consectetur adipiscing elit, sed do o eiusmod tempor.
+          </p>
+          <a class="services__item-link" href="#">
+            Read more
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog">
+    <div class="container">
+      <h4 class="blog__title">
+        Paid Feautered Posts
+      </h4>
+      <p class="blog__subtitle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="slider__blog">
+        <div class="slider__blog-inner">
+          <div class="slider__blog-item">
+            <div class="slider__blog-image">
+              <img src="images/slider-image-1.jpg" alt="">
+            </div>
+            <div class="slider__blog-content">
+              <div class="slider__blog-item__price">
+                $149,999
+              </div>
+              <a class="slider__blog-item__title" href="#">
+                Summer Holiday Amazing Home
+                For Family
+              </a>
+              <a class="slider__blog-item__location" href="#">
+                Vesey st, New york, NY, USA
+              </a>
+              <p class="slider__blog-item__descr">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorum ipsum.
+              </p>
+              <div class="slider__blog-item__author">
+                <img class="slider__blog-item__author-img" src="images/slider-author-image.jpg" alt="">
+                <h4 class="slider__blog-item__author-name">
+                  Vincent Abbot
+                  <span>
+                    Company Agent, CEO & Founder
+                  </span>
+                </h4>
+              </div>
+              <a class="slider__blog-item__btn" href="#">
+                Contact us
+              </a>
+            </div>
+          </div>
+          <div class="slider__blog-item">
+            <div class="slider__blog-image">
+              <img src="images/slider-image-1.jpg" alt="">
+            </div>
+            <div class="slider__blog-content">
+              <div class="slider__blog-item__price">
+                $149,999
+              </div>
+              <a class="slider__blog-item__title" href="#">
+                Summer Holiday Amazing Home
+                For Family
+              </a>
+              <a class="slider__blog-item__location" href="#">
+                Vesey st, New york, NY, USA
+              </a>
+              <p class="slider__blog-item__descr">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorum ipsum.
+              </p>
+              <div class="slider__blog-item__author">
+                <img class="slider__blog-item__author-img" src="images/slider-author-image.jpg" alt="">
+                <h4 class="slider__blog-item__author-name">
+                  Vincent Abbot
+                  <span>
+                    Company Agent, CEO & Founder
+                  </span>
+                </h4>
+              </div>
+              <a class="slider__blog-item__btn" href="#">
+                Contact us
+              </a>
+            </div>
+          </div>
+          <div class="slider__blog-item">
+            <div class="slider__blog-image">
+              <img src="images/slider-image-1.jpg" alt="">
+            </div>
+            <div class="slider__blog-content">
+              <div class="slider__blog-item__price">
+                $149,999
+              </div>
+              <a class="slider__blog-item__title" href="#">
+                Summer Holiday Amazing Home
+                For Family
+              </a>
+              <a class="slider__blog-item__location" href="#">
+                Vesey st, New york, NY, USA
+              </a>
+              <p class="slider__blog-item__descr">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lorum ipsum.
+              </p>
+              <div class="slider__blog-item__author">
+                <img class="slider__blog-item__author-img" src="images/slider-author-image.jpg" alt="">
+                <h4 class="slider__blog-item__author-name">
+                  Vincent Abbot
+                  <span>
+                    Company Agent, CEO & Founder
+                  </span>
+                </h4>
+              </div>
+              <a class="slider__blog-item__btn" href="#">
+                Contact us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container">
+      <div class="benefits__items">
+        <div class="benefits__item">
+          <div class="benefits__item-img">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="90"
+              viewBox="0 0 70 90">
+              <image id="satisfied_medal" data-name="satisfied medal" width="70" height="90"
+                xlink:href="data:img/png;base64,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" />
+            </svg>
+          </div>
+          <p class="benefits__item-num">
+            4,283
+            <span>Satisfied Client</span>
+          </p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-img">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="88"
+              viewBox="0 0 68 88">
+              <image id="Employee" width="68" height="88"
+                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABYCAYAAABMB1FSAAAFLElEQVR4nO2cS4gdRRSGP6+RMYlJfEUdI5MIKmoYMw4qKJphMPGx0ZGBiHmYgA+IiIgIunBhkOBK3ErcuEl2LqIIBhRGF4rERxw0I5NEMBKdKNFoIsZojJzx9FC36dvd91Z1Vd1Jf1CL212PU39Xd5+qOn3PIgxXAkPA9cAy4Dy14jjwHfA18CHwbSD7vHAR8BwwAZwumSTv88DFs0mIucAWvfplhUgnKfuS1tXV3AIcsBAinQ5onV3JRuCkQzGSJHVu6jZBNlcgRDo9EUE/SzEKnPIgyL/aVtRcDRzzIEaSjmmbUSI+zZhHMZL0gbYdHWsCiJGkB2MU5IuAgozHNkpuDShGkm5z0ZGGi0qAhxzVY8PaCGyYYW8EI+QbFx1xcd8tAH53UI8LFtna4uKWucZZd+yxtsWFIDFNza1tcSFITFPyc20rcCHICQd1uOKkbT0uBPnFWXfsORKDEedH8MpN0gW2nXExQo7qSlZoZEH6V1sbXHmq7zuqp9ttmGE4gtvlzki0mEZG2r6AYux3ONqdsSmgIFEuOssV+jSAGNLm2RH0P5MV6qj5EkPaGohQhyYe8SjIoxH1O5cXPYixJeL+Z/JMhWI8G2F/S3E38JNDIX4G7u2CfudyIfAa8I+FEFJ2m9Y1a1gKvAocbkOIw1pmmS8RQuxliM9wM7BSI4j6dMaMThS/10Vr2ZHbrfvENTU1NTXdSMgd81XA/brzZyJBMDuB90IY5UoQ2UK8SqN5LgHeBA7l5JdogY8K6pTd/I9zzi8BHlBfRRaIJoE/OrR/hjlt5p+v0+1B4FpgufoSi1P5JCDuOnWuslhdoq3VOYLIhdyl7ZscUmG+0qBfiRvZ40Iok8uBF4DP2wymW5lTZ5k12OGc8re3YYfY/AnwmO0uo8SfvwL81eH84/WC+rfnlN1eUHZbhzb9AGzoRIwB3eewmZn+VrDXKrHvUxnlpvRcK3rUxbexbacxXShkWDtj02CS1hQ0NpJRZqSgjKvgPnnOXFEkRr9DMSS9U+ICTBr5J0vkf9uhfXvzlhTmaViSq8Yk/a2v4TzM4X+0IO9irdOljbtauR8vO24oSU/ndHBhRv6FOfmfqsjGzemGeoE/K2rss5wO9mfk78/Jv7siG48kD9lk++9JF9E3LRhU5y2LvpLHUEfvpopslOfI46ggcv88XFFDCa3qX1ryGJ36D20gjtu0IANlXj+WrG+xGV12hDQ8CCJzsRsarkKiC1jSwhUvO0KGPFw04Y5GxgSpKrJum7IjZKMnG5eLIJd5amxUZ8smZQSZ5/HLqd6GrmX4YH6GW/5lRrvpYyPGh85Vs6jhObYiPfTfyMiTPlb1G9Bk+sHv87OwU7q+ktCjTpHpIPUY53s9fdCYpDHfcVnS3jrjt6y17DB+79BjCWtDxI75/nBwPNX+oHFuMHVuj2fbxkIIcjojDGo8Q6gVAewaa3eR2RUb9OonZC0KrQ9kW5ARMlXwdpNzP4YYIaGCXS8F7so5v8qjw9hEyOjfvMmaT9+jiZCCjLRYHVtQYqG5MkIKMrfFHGVU5y9BCB0wn3VrVL3ukUtoQYZS6x99BVuYlRNaEFm+3AqcoxvvW0P/qUEox8xknRGMGzwONQZBiCkgN7qvkEJTC5KiFiRFLUiKWpAUtSApakFSNCL7u4vQnBBBDp7ZGjRxsKEhRTX/M63FnDb/Fni2pglzKnOj5V8Ed3s6rho0IQfOxJEyYYqRXnuQIXMfcI8u1lQVdxYaebPKy+Rd4C39DBaA/wA3grvAtF7OKAAAAABJRU5ErkJggg==" />
+            </svg>
+          </div>
+          <p class="benefits__item-num">
+            83
+            <span>Employees</span>
+          </p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-img">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77" height="89"
+              viewBox="0 0 77 89">
+              <image id="hot-cup-of-coffee" width="77" height="89"
+                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAABZCAYAAAB7Tqk9AAAFlklEQVR4nO1de4hWRRT/7VrW1qZtYS/blFxJKnvTQ92KiCAqLVIipKDojZQRiQRRRBCERYGWQfRHDwiih7VE/tFDe6FYthoVmmFkVrJb6ZYbu67G2c7N+907987M+e733Tv3zg8O7Lcz99w5v2/u3DNnzsyHjDAXwA4AuwDcWofKCQA+ALAXwEoA47JqYNEwG8AeAPtYhoTGjgewIaSH5J4yEnYBkxQ2dARAh6WesQA+jughWdSgdueGYwBsVxi6UtCgpQo9JFNKwtX/eDvB0Hst9VyeoGdzA9teF1qFF18L4KqEshYLPQcDWJ6BnsKjRTFgSx/PO1L0lOrx7NYYSjLDUNdGjZ6XGmxL0/CkAWmbALRrGnSSgR6Sq8tAmso1UEkPgDEpeuYb6iGHeXoT7WsIthgaS/JUSgMWWuj5kV2cQkDy9txrUZc8+gUJZQdY6DmBe+4hFtcUCh9a9JBghjBHYcA8Sz0kKzSPfGHxmMDYAQBTFb3HVg/Jwy6SdpbQ2F52ZsNYI9BDw8Nl+VIgg+kbNCqPRu52vVAPvRgOdYWsADOExg4CODakh15E64W6FudLgQzLhMY+GLnbmYrwkolsq2PunBvaAHwrMPZLRYMXC7+Ac10jjXAyvxltDN2j8NFaUkJNaXJnTnbXjTkCYw9X3JRC5N9Z6snF/chiTFiheCvqMKwo38WT8wELPYPyZucPIv9dw96xXdNam54722XSCEcB6DMw9EUDXc8Z6BkSLOAUEgsMjL3EoOFExk6NntfKQBg4CjGYYuinFrqWp+ihqdQZDbSj6ehNMHSYHVlT3JZC2rI8DQz7Sx386BxXZ/jl6IT/fwXgIhYTzEqoM8Ivk4UGOqjXf8M93CYOaIQbBE6qS7IOwKQsCevmb6+shAXytWW0OBWS6YurkolfR07pKVmx7wBOzaKJra7G3IUYm4US5+JRRYAnTQBPmgCeNAGkpA1zYvJIrq23R2Z+2lYLn2s3gLtDGUEUgX1AuDCSl/RxBjlFfc9uBmlJi7TS9csiCM1N7+KFosxJ69Ho+dzx2cI2Tv/Spq3ajGkfacpXWegqIiYCeBnAOymRmlHYkNanKf/HSariuALAWgCnJ1XwLocalNG0GsB5qlJPWjLGcab6tGgNT1o6xnPorGavV9VIe4PzgLdaXDM1mjtcNdI28jakLvYttxhedxOAC4MPVX08afr3KoDTLDZ4PBH8UfUxjaaFNwJYYlD3nGChu+qkBVjE450ONN3ypDH28eL075p65Pi2e9L2o1+zwwacnT7Lk1aLpZypmYZuT1ot/gDwmabONE9aHLrMpkmetDh+0ZR3eNLi+FtTPsaTFscETfluT1ocJ2rK+z1pceh2+G3ypNXifACTNXXWe9JqYbKzb5UnbT8uTdg2HsYPFJPzpP2HTl6+0+EV+CjHKCbzYQapa52cevEMPGmjG9jWGZ5p9CyAX1FR0iiF9EqeY74J4EiDa2ih/JHgQ2apR47gZgD3Cw5FuT0coKwaaZ2Ca56OhsKrPqbpQAvF90XreNKS8RYf7RPL9rQh7cAmNLQoeJzP7h1StcdmTNPNySY6R00cPwO4BcB7uoqmmZA0hTgoQcdhhluxiyp/AnjI5q262cIQ2n8efUzbOHvQRbI+4QVg3VGMNWjhC2daXEOnvrzAhyR1cXfWBe6Kgvc5Wa+X7e6Xtut5xxOMbUScAh9GKx/rVQUMcA/LhLSehBNZyoYeg9VzY9LouX69AqQlHXctxvSS72PPdI9DsKt4B4dIlCngjoOGnmsA/NYIM9o0B5m7KrEJd9Y4HsBPJSKsaSfFdPLONNcJW9Ls3zRoZ6/fRbLIG7iumWRFMZO3urhA1k4O6RzRaFJMu28X/0TIxXz4Sb2HOGUB2vX3PYAvOJRDzutfDb8rgH8BQZx94lkVmkUAAAAASUVORK5CYII=" />
+            </svg>
+          </div>
+          <p class="benefits__item-num">
+            973
+            <span>Cups of Cofee</span>
+          </p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-img">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107" height="89"
+              viewBox="0 0 107 89">
+              <image id="Property" width="107" height="89"
+                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGsAAABZCAYAAAA5DdqqAAAEwUlEQVR4nO2cPYgVVxTHf5pEBQOJFn6EuMYQiCAIWlitAdMlhak0KWJpGu2yQYhY6YI2ImqhYKESMZBibSI2ioIWGgTBBS0UjF9ZIWrhB+vHqtzljKyPfTv3zTsz9x73/OAwvN2Zc+89f+bNnf+dN7yHzAF2ytbJmF7gDvBatr0uVn5MAX4FXohQRbyQv0+Z7AXKhU+AgRaRWmNA9nMSsgy4XiJUEddlfycB64HhSKGKGJbjnIaYCRzqUKTWOCR5nBr5GrjcpVBFXJZ8Tg2sBR4pCVXEI8nrKDEN2K0sUmvslnayJvf7jx7gL2BFA21dANYAN0v2OwB8VbGNE8D2isdmzXfA/ZrPqNa4L+1OxKUu8h/spuBTM1TrA2Ar8Dcwu+G2Z0u7W6UfzgQE8/Vkw2dTuzjZxgz2M0tM11CIbzPoC9KPSzmZwTmIFSY5fcBpYL5CvhHgiGy7Zb70q8/NYPg0woTtJO6OORN65bNW7gHpb7KvwZR0YsJWvcZoXwNDf/+bbGJVMWHbxauS2Vsxu3ylKNqkECuYp4cVBx9zX1SQ4r7NrFiLgUHFgZ8Xh6MTeuQ4F2sCflQ2Ybvx8prwGk2KFQqzR3Gwmi55HS6+WbF6xBzVGmjs+tMi4A/ZlqG5PmZWrHAxf6A4yNiV3dXAQznmoXwuQ2Pl2aRYYZq8TXFwsc9MfAjsaJNjh/y/DM3biezFmlvDDWjM00jBEjpTkutMpJWlfaOepVgra7J2ylgFDEXmHJL9y9C2wLIRK5ibvwEvlQbzMtI0Df//XczaTvKPyHEx+fsUx5VcrFnAMcWB3I1cjigWCLtpK3ZhU9sM/kfq1ijLGzBhxyM8i3FDqc0bkc921GEGL29KrF8aNGHHsgF4pli015JvQ0Tb2mbwsNSxNlKZsB8DR5VFao2j0k4Z2mbw4TqeDE5lwi4BrtQsVBFXpL0ytM3gQamvCj8BjxU7F2vC/gw8aUioIp5Iu2Vom8GPpc6VCR3aq9ihWBN2OrCvYZFaY5/0owxtM3hvldWEhQlN2IuJhSriYiIz+ILUP4rvMzBhc4lUZvAD0aEtYXrar9ighgmbS6Qyg/vHu62ZB5xSbETThM0lUpnBp0SfUb4xYMLmEkORTwzX8Txk0Gl0RqORsG4TNpcI/d6cwAx+O5PepaB8UyZsLnG8QTN419iEHwHnKiZKYcLmEv82YAafE33e4TPgXgdJUpuwucRzYGNEDaqYwfdEl3FZFXktycmEzSX+VDaDR2JWtjeVJMnRhM0lriqawZsi8ozOYtqtAOdswuYSYdzrImo0kRl8rJPfg4WXUl0bc7AlEzaX2A/MiKhZqxl8rcpLwZYCT42asLlEqMeXEbUrzOCnUvdKrDRswuYSoS4/RNRwptS7LRq/k/0cuKWQ531nAXC7mzFq/AA8xo12FOqU40tLnDa4WIZwsQzhYhnCxTKEi2UIF8sQLpYhLN/QbgHOVjx2nqyzmcKyWIPyerkqfJG269Xwr0FDuFiGcLEM4WIZwsUyhItlCBfLEC6WIVwsQ7hYhnCxDOFiGcLFMoSLZQgXyxAuliFcLEO4WIZwsQzhYhnCxTKEi2UIF8sQLpYhXCxDaDyROywvTmya/431ObRZHeANgJj1ChSYYdIAAAAASUVORK5CYII=" />
+            </svg>
+          </div>
+          <p class="benefits__item-num">
+            25,345
+            <span>Total Property</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="property">
+    <div class="container">
+      <h3 class="property__title">
+        Recent Property
+      </h3>
+      <p class="property__subtitle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="property__items">
+        <div class="property__item">
+          <div class="property__item-img__box">
+            <img class="property__item-images" src="images/property-1.jpg" alt="">
+            <div class="property__item-content">
+              <div class="property__item__link-box">
+                <a class="property__item-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                    height="18" viewBox="0 0 18 18">
+                    <image id="Search_white" data-name="Search white" width="18" height="18"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABMUlEQVQ4jZ2SsUoDURBF3yZFQOxEISAprKxFUtqkTpMuv5Ev0M4PULC2TxNSWNmlsLHxB0SECAYkokWIcmTMLNw89u1Gb/XYuXvenTcTVEAN6ANjYMZK78AEGADboUrAAXBPuaZAJ4lyyGuEmAMPwEv0/QvoFkFqUZJnoAfUxdMG7sRj7TZjUD+C7CdSN4Bb8V7EhrEUe2VPCbSAhXtnmjrIdOZrhTTsRi4+zL/XQgg7fn7Ksuy7ChRCeJTznoI+/Ly7AST2fWrUiURtlxFsIYE39y6BLS0OBGQjbpSALsU7KrplKgYbcavAoxDTcdFNHd/YXAufzhUwlHZU56nYXd/YvygJa9rGym7lsocdWTv280bJHFi3ZQNOgKO16azqMewsCatSBFv+G+Sw09+24foHNVJeR8EYo40AAAAASUVORK5CYII=" />
+                  </svg>
+                </a>
+                <a class="property__item-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
+                    height="14" viewBox="0 0 20 14">
+                    <image id="Strategy" width="20" height="14"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAAd0lEQVQ4jc2TwQmAMBAEd8WXBViBhaQgmxEsRPuxAvHtd+V+JoRA5ITMc3NZbu8SStrgiBnK07AHsHgatg/fHUoaAQyVXd8kz+yJbVz1RK+k857hv5GbJIqcImkCMCf6SvL4FEZSyOw8lO7Y1ytxAdiTAtPyAHgARH1nZwRvUJkAAAAASUVORK5CYII=" />
+                  </svg>
+                </a>
+              </div>
+              <p class="property__item-content-price">
+                ( $3,999/sq ft )
+              </p>
+              <p class="property__item-content-name">
+                Developing a strategy
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="property__item">
+          <div class="property__item-img__box">
+            <img class="property__item-images" src="images/property-2.jpg" alt="">
+            <div class="property__item-content">
+              <div class="property__item__link-box">
+                <a class="property__item-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                    height="18" viewBox="0 0 18 18">
+                    <image id="Search_white" data-name="Search white" width="18" height="18"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABMUlEQVQ4jZ2SsUoDURBF3yZFQOxEISAprKxFUtqkTpMuv5Ev0M4PULC2TxNSWNmlsLHxB0SECAYkokWIcmTMLNw89u1Gb/XYuXvenTcTVEAN6ANjYMZK78AEGADboUrAAXBPuaZAJ4lyyGuEmAMPwEv0/QvoFkFqUZJnoAfUxdMG7sRj7TZjUD+C7CdSN4Bb8V7EhrEUe2VPCbSAhXtnmjrIdOZrhTTsRi4+zL/XQgg7fn7Ksuy7ChRCeJTznoI+/Ly7AST2fWrUiURtlxFsIYE39y6BLS0OBGQjbpSALsU7KrplKgYbcavAoxDTcdFNHd/YXAufzhUwlHZU56nYXd/YvygJa9rGym7lsocdWTv280bJHFi3ZQNOgKO16azqMewsCatSBFv+G+Sw09+24foHNVJeR8EYo40AAAAASUVORK5CYII=" />
+                  </svg>
+                </a>
+                <a class="property__item-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
+                    height="14" viewBox="0 0 20 14">
+                    <image id="Strategy" width="20" height="14"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAAd0lEQVQ4jc2TwQmAMBAEd8WXBViBhaQgmxEsRPuxAvHtd+V+JoRA5ITMc3NZbu8SStrgiBnK07AHsHgatg/fHUoaAQyVXd8kz+yJbVz1RK+k857hv5GbJIqcImkCMCf6SvL4FEZSyOw8lO7Y1ytxAdiTAtPyAHgARH1nZwRvUJkAAAAASUVORK5CYII=" />
+                  </svg>
+                </a>
+              </div>
+              <p class="property__item-content-price">
+                ( $3,999/sq ft )
+              </p>
+              <p class="property__item-content-name">
+                Developing a strategy
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="property__item">
+          <div class="property__item-img__box">
+            <img class="property__item-images" src="images/property-3.jpg" alt="">
+            <div class="property__item-content">
+              <div class="property__item__link-box">
+                <a class="property__item-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                    height="18" viewBox="0 0 18 18">
+                    <image id="Search_white" data-name="Search white" width="18" height="18"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABMUlEQVQ4jZ2SsUoDURBF3yZFQOxEISAprKxFUtqkTpMuv5Ev0M4PULC2TxNSWNmlsLHxB0SECAYkokWIcmTMLNw89u1Gb/XYuXvenTcTVEAN6ANjYMZK78AEGADboUrAAXBPuaZAJ4lyyGuEmAMPwEv0/QvoFkFqUZJnoAfUxdMG7sRj7TZjUD+C7CdSN4Bb8V7EhrEUe2VPCbSAhXtnmjrIdOZrhTTsRi4+zL/XQgg7fn7Ksuy7ChRCeJTznoI+/Ly7AST2fWrUiURtlxFsIYE39y6BLS0OBGQjbpSALsU7KrplKgYbcavAoxDTcdFNHd/YXAufzhUwlHZU56nYXd/YvygJa9rGym7lsocdWTv280bJHFi3ZQNOgKO16azqMewsCatSBFv+G+Sw09+24foHNVJeR8EYo40AAAAASUVORK5CYII=" />
+                  </svg>
+                </a>
+                <a class="property__item-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
+                    height="14" viewBox="0 0 20 14">
+                    <image id="Strategy" width="20" height="14"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAAd0lEQVQ4jc2TwQmAMBAEd8WXBViBhaQgmxEsRPuxAvHtd+V+JoRA5ITMc3NZbu8SStrgiBnK07AHsHgatg/fHUoaAQyVXd8kz+yJbVz1RK+k857hv5GbJIqcImkCMCf6SvL4FEZSyOw8lO7Y1ytxAdiTAtPyAHgARH1nZwRvUJkAAAAASUVORK5CYII=" />
+                  </svg>
+                </a>
+              </div>
+              <p class="property__item-content-price">
+                ( $3,999/sq ft )
+              </p>
+              <p class="property__item-content-name">
+                Developing a strategy
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="property__item">
+          <div class="property__item-img__box">
+            <img class="property__item-images" src="images/property-4.jpg" alt="">
+            <div class="property__item-content">
+              <div class="property__item__link-box">
+                <a class="property__item-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                    height="18" viewBox="0 0 18 18">
+                    <image id="Search_white" data-name="Search white" width="18" height="18"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABMUlEQVQ4jZ2SsUoDURBF3yZFQOxEISAprKxFUtqkTpMuv5Ev0M4PULC2TxNSWNmlsLHxB0SECAYkokWIcmTMLNw89u1Gb/XYuXvenTcTVEAN6ANjYMZK78AEGADboUrAAXBPuaZAJ4lyyGuEmAMPwEv0/QvoFkFqUZJnoAfUxdMG7sRj7TZjUD+C7CdSN4Bb8V7EhrEUe2VPCbSAhXtnmjrIdOZrhTTsRi4+zL/XQgg7fn7Ksuy7ChRCeJTznoI+/Ly7AST2fWrUiURtlxFsIYE39y6BLS0OBGQjbpSALsU7KrplKgYbcavAoxDTcdFNHd/YXAufzhUwlHZU56nYXd/YvygJa9rGym7lsocdWTv280bJHFi3ZQNOgKO16azqMewsCatSBFv+G+Sw09+24foHNVJeR8EYo40AAAAASUVORK5CYII=" />
+                  </svg>
+                </a>
+                <a class="property__item-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20"
+                    height="14" viewBox="0 0 20 14">
+                    <image id="Strategy" width="20" height="14"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAAd0lEQVQ4jc2TwQmAMBAEd8WXBViBhaQgmxEsRPuxAvHtd+V+JoRA5ITMc3NZbu8SStrgiBnK07AHsHgatg/fHUoaAQyVXd8kz+yJbVz1RK+k857hv5GbJIqcImkCMCf6SvL4FEZSyOw8lO7Y1ytxAdiTAtPyAHgARH1nZwRvUJkAAAAASUVORK5CYII=" />
+                  </svg>
+                </a>
+              </div>
+              <p class="property__item-content-price">
+                ( $3,999/sq ft )
+              </p>
+              <p class="property__item-content-name">
+                Developing a strategy
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="property__link-box">
+        <a class="property__link" href="#">
+          View All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="rewiews-slider">
+    <div class="container">
+      <h2 class="rewiews-slider__title">
+        What Our Clients Says
+      </h2>
+      <p class="rewiews-slider__subtitle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="rewiews-slider__inner">
+        <div class="rewiews-slider__item">
+          <div class="rewiews-slider__text-box">
+            <p class="rewiews-slider__text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+              veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            </p>
+          </div>
+          <div class="rewiews-slider__author">
+            <div class="rewiews-slider__img">
+              <img src="images/rewiews-author-img.jpg" alt="">
+            </div>
+            <div class="rewiews-slider__author-name">
+              Thomas Tuffel
+              <span>Loyal Customer</span>
+            </div>
+          </div>
+        </div>
+        <div class="rewiews-slider__item">
+          <div class="rewiews-slider__text-box">
+            <p class="rewiews-slider__text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+              veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            </p>
+          </div>
+          <div class="rewiews-slider__author">
+            <div class="rewiews-slider__img">
+              <img src="images/rewiews-author-img.jpg" alt="">
+            </div>
+            <div class="rewiews-slider__author-name">
+              Thomas Tuffel
+              <span>Loyal Customer</span>
+            </div>
+          </div>
+        </div>
+        <div class="rewiews-slider__item">
+          <div class="rewiews-slider__text-box">
+            <p class="rewiews-slider__text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+              veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            </p>
+          </div>
+          <div class="rewiews-slider__author">
+            <div class="rewiews-slider__img">
+              <img src="images/rewiews-author-img.jpg" alt="">
+            </div>
+            <div class="rewiews-slider__author-name">
+              Thomas Tuffel
+              <span>Loyal Customer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__form">
+        <form class="form">
+          <input class="form__input" type="email" placeholder="Enter Your Email Address">
+          <button class="form__btn">
+            Subscribe
+          </button>
+        </form>
+      </div>
+      <div class="footer__inner">
+        <div class="footer__posts">
+          <h3 class="footer__posts-title">
+            Popular Posts
+          </h3>
+          <div class="footer__posts-item">
+            <a class="footer__posts-image" href="#">
+              <img src="images//footer-posts-img-1.jpg" alt="">
+            </a>
+            <div class="footer__posts-content">
+              <p class="footer__posts-content__sum">
+                $135,595
+              </p>
+              <a class="footer__posts-content__text" href="#">
+                Amazing Luxary Apartments For Family
+              </a>
+            </div>
+          </div>
+          <div class="footer__posts-item">
+            <a class="footer__posts-image" href="#">
+              <img src="images/footer-posts-img-2.jpg" alt="">
+            </a>
+            <div class="footer__posts-content">
+              <p class="footer__posts-content__sum">
+                $135,595
+              </p>
+              <p class="footer__posts-content__text">
+                Amazing Luxary Apartments For Family
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__items">
+          <div class="footer__item">
+            <h4 class="footer__item-title">
+              More information
+            </h4>
+            <ul class="footer__item-list">
+              <li class="footer__item-list__info">
+                <a class="footer__item-list__link" href="#">Help Center</a>
+              </li>
+              <li class="footer__item-list__info">
+                <a class="footer__item-list__link" href="#">Terms of Use</a>
+              </li>
+              <li class="footer__item-list__info">
+                <a class="footer__item-list__link" href="#">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <ul class="footer__item-list">
+              <li class="footer__item-list__info">
+                <a class="footer__item-list__link" href="#">About</a>
+              </li>
+              <li class="footer__item-list__info">
+                <a class="footer__item-list__link" href="#">About Buildy</a>
+              </li>
+              <li class="footer__item-list__info">
+                <a class="footer__item-list__link" href="#">Buildy marketing blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__bottom-text">
+          2018. All Rights Reserved. Designed By Buildy
+        </p>
+        <div class="footer__bottom-social">
+          <a class="footer__bottom-social__link" href="#">
+            <img src="images/facebook.svg" alt="">
+          </a>
+          <a class="footer__bottom-social__link" href="#">
+            <img src="images/instagram.svg" alt="">
+          </a>
+          <a class="footer__bottom-social__link" href="#">
+            <img src="images/linkedin.svg" alt="">
+          </a>
+          <a class="footer__bottom-social__link" href="#">
+            <img src="images/twitter.svg" alt="">
+          </a>
+          <a class="footer__bottom-social__link" href="#">
+            <img src="images/youtube.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
